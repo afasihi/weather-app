@@ -19,6 +19,7 @@ app.set('views', viewsPath)
 app.use(express.static(publicDirPath));
 
 hbs.registerPartials(partialsPath)
+
 app.get('', (req, res) => {
     res.render('index', {
         title: 'weather App',
