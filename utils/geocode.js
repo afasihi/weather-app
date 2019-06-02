@@ -16,7 +16,6 @@ const geoCode = (address, callback) => {
                 lat,
                 lon,
                 name,
-                result: `latitude is ${lat} and longitude is ${lon} in ${name}`
             });
         }
     })

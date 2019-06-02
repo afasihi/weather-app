@@ -47,7 +47,7 @@ app.get('/weather', (req, res) => {
             error: "please provide a valid address"
         })
     }
-    geoCode(req.query.address, (error, { lon, lat, name, result } = {}) => {
+    geoCode(req.query.address, (error, { lon, lat, name} = {}) => {
         if (error) {
             return res.send({ error });
         }
@@ -58,8 +58,7 @@ app.get('/weather', (req, res) => {
             res.send({
                 data: forecastData,
                 name,
-                address: req.query.address,
-                result
+                address: req.query.address
             })
         });
     });

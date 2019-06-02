@@ -15,7 +15,8 @@ const forecast = (lon, lat, callback) => {
             callback(undefined, {
                 name,
                 temp: Math.trunc(temp),
-                humidity
+                humidity,
+                result:`${name} it\'s currently ${Math.trunc(temp)} C. there is ${humidity}% of humidity.`
             })
         }
     })
