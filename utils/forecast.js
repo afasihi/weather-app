@@ -9,14 +9,15 @@ const forecast = (lon, lat, callback) => {
             callback("coordenate in incorrect, try another search");
         }
         else {
-            let { name, main } = body;
+            let { name, main, weather } = body;
             let { temp, humidity } = main;
             //callback(undefined ,`${name} it\'s currently ${Math.trunc(temp)} C. there is ${humidity}% of humidity.`);
             callback(undefined, {
                 name,
                 temp: Math.trunc(temp),
                 humidity,
-                result:`${name} it\'s currently ${Math.trunc(temp)} C. there is ${humidity}% of humidity.`
+                result:`${name} it\'s currently ${Math.trunc(temp)} C. there is ${humidity}% of humidity.`,
+                description: weather[0].description
             })
         }
     })
