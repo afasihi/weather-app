@@ -3,6 +3,7 @@ const request = require('request')
 const forecast = (lon, lat, callback) => {
     let urlWeather = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=dec44e6d6f6473963eeff465cbee3b64&units=metric`
     request({ url: urlWeather, json: true }, (error, { body } = {}) => {
+
         if (error) {
             callback("You are not connect, please connect again");
         } else if (!(body.name)) {
@@ -16,8 +17,9 @@ const forecast = (lon, lat, callback) => {
                 name,
                 temp: Math.trunc(temp),
                 humidity,
-                result:`${name} it\'s currently ${Math.trunc(temp)} C. there is ${humidity}% of humidity.`,
-                description: weather[0].description
+                result: `${name} it\'s currently ${Math.trunc(temp)} C. there is ${humidity}% of humidity.`,
+                description: weather[0].description,
+                icon: weather[0].icon
             })
         }
     })

@@ -24,22 +24,22 @@ hbs.registerPartials(partialsPath)
 app.get('', (req, res) => {
     res.render('index', {
         title: 'weather App',
-        name: 'abderrahman fasihi'
+        name: 'Abderrahman Fasihi'
     })
 })
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Us',
-        name: 'Abderrahman fasihi'
+        name: 'Abderrahman Fasihi'
     })
 })
-app.get('/help', (req, res) => {
-    res.render('help', {
-        message: 'if you need help don\'t contact us',
-        title: 'Help',
-        name: "Abderrahman fasihi"
-    })
-})
+// app.get('/help', (req, res) => {
+//     res.render('help', {
+//         message: 'if you need help don\'t contact us',
+//         title: 'Help',
+//         name: "Abderrahman Fasihi"
+//     })
+// })
 
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
@@ -47,7 +47,7 @@ app.get('/weather', (req, res) => {
             error: "please provide a valid address"
         })
     }
-    geoCode(req.query.address, (error, { lon, lat, name} = {}) => {
+    geoCode(req.query.address, (error, { lon, lat, name } = {}) => {
         if (error) {
             return res.send({ error });
         }
@@ -64,17 +64,17 @@ app.get('/weather', (req, res) => {
     });
 })
 
-app.get('/help/*', (req, res) => {
-    res.render('error', {
-        message: 'Help artical not found',
-        name: "Abderrahman fasihi"
-    })
-})
+// app.get('/help/*', (req, res) => {
+//     res.render('error', {
+//         message: 'Help artical not found',
+//         name: "Abderrahman Fasihi"
+//     })
+// })
 
 app.get('*', (req, res) => {
     res.render('notfound', {
         message: 'Page not found',
-        name: "Abderrahman fasihi"
+        name: "Abderrahman Fasihi"
     })
 })
 

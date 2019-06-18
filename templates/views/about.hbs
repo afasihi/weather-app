@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="img/weather.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="CSS/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+
+    <script src="js/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://kit.fontawesome.com/a3a0511bbb.js"></script>
     <title>About Page</title>
 </head>
+
 <body>
     <div class="main">
         {{>header}}
-    <img src="img/IMG2019.jpg" class="portrait" alt="ANA">
-    </div>
-    
-    {{>footer}}
+        {{!-- <img src="img/IMG2019.jpg" class="portrait" alt="ANA">
+    </div> --}}
+        <section class="banner-bottom" id="about">
+            <div class="container">
+                <div class="inner-sec">
+                    <div class="row middle-grids">
+                        <div class="col-lg-4 advantage-grid-info1">
+                            <div class="advantage_left1 text-center">
+                                <img src="img/1.jpg" class="imgz img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 advantage-grid-info">
+                            <div class="advantage_left">
+                                <h1 class="heading text-capitalize mb-sm-5 mb-4 marg">Hi. I'm <span>Abderrahman
+                                        Fasihi.</span>
+                                </h1>
+                                <p class="mt-4 text-about">A driven professional with broad technical skill set,
+                                    Excellent
+                                    communicator, Thrives in environments that constantly embrace new
+                                    technologies, Highly motivated, and passionate about Computer Science.</p>
+                                <a href="https://github.com/afasihi" class="banner-button btn mt-5 scroll"><i
+                                        class="fab fa-github"></i> About what i do</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{>footer}}
 
 </body>
+
 </html>

@@ -1,29 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="img/weather.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="js/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/style.css">
-    
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a3a0511bbb.js"></script>
+
+    <title>Weather App</title>
 </head>
+
 <body>
     <div class="main">
         {{>header}}
-        <p>Use this site to get your weather</p>
+        {{!-- <p>Use this site to get your weather</p>
         <form>
             <input id="location" placeholder="location">
             <button>Search</button>
         </form>
         <p id="msg1"></p>
-        <p id="msg2"></p>
+        <p id="msg2"></p> --}}
+        <div class="banner">
+            <div class="container">
+
+                <div class="row"></div>
+
+                <div class="row" style="height: 500px">
+                    <div class="col-md-12">
+                        <div class="text-font">
+                            <p style="color: #1f3142; font-size: 150px" id="temp"></p>
+                            <p id="msg1" style="color: #1f3142; font-weight: bold">Please enter a location below to get
+                                your weather</p><br>
+                            <p id="msg2" style="color: #ecf0f1"></p><br>
+                        </div>
+                        <form>
+                            <input id="location" placeholder="location">
+                            <button class="button">Search</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row" style="height: 116px">
+
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="content-top">
+                    <div class="col-md-4 grid">
+
+                        <h3><i class="fas fa-sun"></i> Cool clear weahter</h3>
+                        <p>Blandit, in, augue at tincidunt ut augue elit amet feugiat laoreet. Autem nisl tincidunt
+                            aliquip eu minim veniam feugait accumsan dolore eros </p>
+                        <a href="#" class="just-do-in">Just do it </a>
+                    </div>
+                    <div class="col-md-4 grid">
+                        <h3><i class="fas fa-cloud-showers-heavy"></i> This Weather sucks</h3>
+                        <p>Blandit, in, augue at tincidunt ut augue elit amet feugiat laoreet. Autem nisl tincidunt
+                            aliquip eu minim veniam feugait accumsan dolore eros </p>
+                        <a href="#" class="just-do-in">Just do it </a>
+                    </div>
+                    <div class="col-md-4 grid">
+                        <h3><i class="fas fa-cloud"></i> Clouds All Around</h3>
+                        <p>Blandit, in, augue at tincidunt ut augue elit amet feugiat laoreet. Autem nisl tincidunt
+                            aliquip eu minim veniam feugait accumsan dolore eros</p>
+                        <a href="#" class="just-do-in">Just do it </a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
 
 
     </div>
-    
+
     {{>footer}}
     <script src="JavaScript/app.js"></script>
 </body>
+
 </html>
