@@ -28,23 +28,23 @@ app.get('', (req, res) => {
     })
 })
 app.get('/about', (req, res) => {
-    res.render('about', {
-        title: 'About Us',
-        name: 'Abderrahman Fasihi'
+        res.render('about', {
+            title: 'About Us',
+            name: 'Abderrahman Fasihi'
+        })
     })
-})
-// app.get('/help', (req, res) => {
-//     res.render('help', {
-//         message: 'if you need help don\'t contact us',
-//         title: 'Help',
-//         name: "Abderrahman Fasihi"
-//     })
-// })
+    // app.get('/help', (req, res) => {
+    //     res.render('help', {
+    //         message: 'if you need help don\'t contact us',
+    //         title: 'Help',
+    //         name: "Abderrahman Fasihi"
+    //     })
+    // })
 
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
-            error: "please provide a valid address"
+            error: "Please Provide a Valid Address"
         })
     }
     geoCode(req.query.address, (error, { lon, lat, name } = {}) => {

@@ -118,11 +118,10 @@ p {
 
 .top-nav ul li a {
     display: inline-block;
-    color: #1f6481;
+    color: #1B2A41;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.2em;
-    margin: 1em 0.5em;
     padding: 0.7em 1.2em;
     background: #fff;
     border: 1px solid #fff;
@@ -135,13 +134,12 @@ p {
 
 .top-nav ul li a:hover,
 .top-nav ul li.active a {
-    background: #fafafa;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -o-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border: 1px solid #EEEFF0;
+    background: rgb(195, 204, 224);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
 }
 
 .top-nav span.menu {
@@ -298,7 +296,7 @@ p {
 }
 
 .grid h3 {
-    color: #1e719b;
+    color: rgb(31, 51, 82);
     font-size: 1.3em;
     font-weight: 700;
     text-transform: uppercase;
@@ -330,7 +328,7 @@ p {
 /*--grid--*/
 
 .grid:hover.grid h3 {
-    color: #755f83;
+    color: #000;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -351,7 +349,7 @@ p {
 }
 
 .grid:hover a.just-do-in {
-    background: #755f83;
+    background: #000;
 }
 
 a.just-do,
@@ -360,7 +358,7 @@ a.just-do-in {
     text-decoration: none;
     font-size: 1.2em;
     font-weight: 600;
-    background: #4fa7d1;
+    background: rgb(31, 51, 82);
     padding: 0.3em 1em;
     display: inline-block;
     border-radius: 6px;
@@ -825,7 +823,7 @@ p.you {
 /*--footer--*/
 
 .footer {
-    background: #0e4d6f;
+    background: #1B2A41;
     padding: 3em 0 1em;
 }
 
@@ -849,7 +847,7 @@ p.foot {
 
 .submit input[type="text"] {
     width: 65%;
-    color: #cccccc;
+    color: #000;
     font-weight: 400;
     background: #fff;
     outline: none;
@@ -1188,8 +1186,9 @@ p.footer-class a:hover {
 }
 
 img {
-    width: 230px;
-    height: 90px;
+    width: 180px;
+    height: 60px;
+    margin-top: -10px;
 }
 
 @media(max-width:320px) {
@@ -1417,21 +1416,26 @@ form {
 
 #location {
     font-size: 16px;
-    text-align: center;
     margin-left: 21px;
-    height: 54px;
+    height: 52px;
     width: 300px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none
 }
 
 .button {
-    background-color: rgb(22, 24, 26);
-    /* Green */
+    background-color: #1B2A41;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    height: 54px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: -2px;
 }
 
 .text-font {
@@ -1466,7 +1470,7 @@ form {
 
 a.banner-button,
 button.submit {
-    background: #34495e;
+    background: #1B2A41;
     color: #fff;
     letter-spacing: 1px;
     font-size: 1.5em;
@@ -1507,7 +1511,7 @@ a.banner-button2:hover {
 }
 
 .banner-bottom {
-    background-color: rgba(169, 204, 250, 0.8);
+    background-color: rgb(178, 192, 212);
     padding: 10em 0;
     box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
 }
@@ -1529,7 +1533,7 @@ a.banner-button2:hover {
 
 .agileits-services-grids span {
     font-size: 4.5em;
-    color: #8abdea;
+    color: #59A9B7;
 }
 
 p.subs {
@@ -1547,5 +1551,5 @@ p.subs {
 }
 
 a i {
-    color: #000;
+    color: #fff;
 }
